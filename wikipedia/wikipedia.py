@@ -212,7 +212,7 @@ def random(pages=1):
 
 
 @cache
-def summary(title, sentences=0, chars=0, auto_suggest=True, redirect=True):
+def summary(title, sentences=0, chars=0, auto_suggest=False, redirect=True):
   '''
   Plain text summary of the page.
 
@@ -251,7 +251,7 @@ def summary(title, sentences=0, chars=0, auto_suggest=True, redirect=True):
   return summary
 
 
-def page(title=None, pageid=None, auto_suggest=True, redirect=True, preload=False):
+def page(title=None, pageid=None, auto_suggest=False, redirect=True, preload=False):
   '''
   Get a WikipediaPage object for the page with title `title` or the pageid
   `pageid` (mutually exclusive).

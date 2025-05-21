@@ -71,7 +71,7 @@ class TestPageSetUp(unittest.TestCase):
   def test_auto_suggest(self):
     """Test that auto_suggest properly corrects a typo."""
     # yum, butter.
-    butterfly = wikipedia.page("butteryfly")
+    butterfly = wikipedia.page("butteryfly", auto_suggest=True)
 
     self.assertEqual(butterfly.title, "Butterfly")
     self.assertEqual(butterfly.url, "http://en.wikipedia.org/wiki/Butterfly")
